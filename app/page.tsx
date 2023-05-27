@@ -28,23 +28,23 @@ export default function Home() {
         className="py-10 mb-12 flex justify-center md:justify-end sticky top-0 z-50 bg-inherit opacity-90"
       >
         <ul className="flex items-center justify-center gap-5 md:gap-10 lg:gap-20 font-medium">
-          <li className="cursor-pointer text-xl hover:text-orange-500 transition duration-150">
+          <li className="cursor-pointer text-md hover:text-orange-500 transition duration-150 md:text-xl">
             <ScrollLink href="#aboutSection">About Me</ScrollLink>
           </li>
-          <li className="cursor-pointer text-xl hover:text-orange-500 transition duration-150">
+          <li className="cursor-pointer text-md hover:text-orange-500 transition duration-150 md:text-xl">
             <ScrollLink href="#skillsSection">My Skills</ScrollLink>
           </li>
-          <li className="cursor-pointer text-xl hover:text-orange-500 transition duration-150">
+          <li className="cursor-pointer text-md hover:text-orange-500 transition duration-150 md:text-xl">
             <ScrollLink href="#projectsSection">My Projects</ScrollLink>
           </li>
         </ul>
       </nav>
       <section className="min-h-screen">
-        <div className="text-center p-10">
-          <h2 className="text-3xl py-2 text-orange-500 font-semibold md:text-5xl">
+        <div className="text-center py-10 ">
+          <h2 className="text-2xl py-2 text-orange-500 font-semibold md:text-5xl">
             Dennis Moradkhani
           </h2>
-          <div className="relative bg-gradient-to-b from-orange-500 rounded-full w-80 h-80 overflow-hidden mt-10 mx-auto md:h-96 md:w-96">
+          <div className="relative bg-gradient-to-b from-orange-500 rounded-full w-60 h-60 overflow-hidden mt-10 mx-auto md:h-96 md:w-96 ">
             <Image
               src={Avatar}
               fill
