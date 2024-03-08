@@ -58,8 +58,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed sm:hidden left-0 top-0 z-10 h-screen w-full transform bg-white opacity-95 duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed sm:hidden left-0 top-0 h-screen w-full transform bg-white opacity-95 duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-[110%]"
         }`}
       >
         <div className="flex justify-end">
