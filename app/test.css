@@ -1,0 +1,17 @@
+#test {
+  background: linear-gradient(90deg, #ff770a, #00eb75);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: liquid 3s infinite alternate;
+}
+
+@keyframes liquid {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

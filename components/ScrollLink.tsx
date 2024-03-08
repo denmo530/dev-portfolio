@@ -1,47 +1,36 @@
-"use client";
-import Link, { LinkProps } from "next/link";
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React from "react";
+import Link from "next/link";
 
-type AnchorProps = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  keyof LinkProps
->;
+interface ScrollLinkProps {
+  href: string;
+  offset: number;
+  className?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+}
 
-type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
-
-const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(
-        window.pageYOffset || document.documentElement.scrollTop
-      );
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+const ScrollLink: React.FC<ScrollLinkProps> = ({
+  href,
+  offset,
+  className,
+  onClick,
+  children,
+}) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const targetId = e.currentTarget.href.replace(/.*\#/, "");
-    const element = document.getElementById(targetId);
-    const navBarHeight = document.getElementById("navbar")?.offsetHeight;
-    if (element && navBarHeight) {
-      const scrollToPosition =
-        scrollPosition + element.getBoundingClientRect().top - navBarHeight;
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      const offsetPosition = element.offsetTop - offset;
       window.scrollTo({
-        top: scrollToPosition,
+        top: offsetPosition,
         behavior: "smooth",
       });
     }
+    if (onClick) onClick();
   };
+
   return (
-    <Link {...props} onClick={handleScroll}>
+    <Link href={href} passHref className={className} onClick={handleClick}>
       {children}
     </Link>
   );
