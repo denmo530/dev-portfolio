@@ -8,6 +8,7 @@ import ScrollLink from "./ScrollLink";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navbarOffset = 100;
+  const mobileNavbarOffset = 120;
 
   return (
     <header className="sticky z-40 top-0 flex items-center justify-between  bg-transparent py-5 backdrop-blur-md">
@@ -72,40 +73,44 @@ const Navbar = () => {
         </div>
         <div className="fixed mt-8 h-full">
           <div className="px-12 py-4">
-            <Link
+            <ScrollLink
+              offset={mobileNavbarOffset}
               href="#about"
               onClick={() => setIsOpen(false)}
               className="transition-hover text-2xl font-semibold tracking-widest text-gray-700 duration-300 hover:border-b-2  hover:border-b-trinidad-500 "
             >
               About
-            </Link>
+            </ScrollLink>
           </div>
           <div className="px-12 py-4">
-            <Link
+            <ScrollLink
+              offset={mobileNavbarOffset}
               href="#experience"
               onClick={() => setIsOpen(false)}
               className="transition-hover text-2xl font-semibold tracking-widest text-gray-700 duration-300 hover:border-b-2  hover:border-b-trinidad-500 "
             >
               Experience
-            </Link>
+            </ScrollLink>
           </div>
           <div className="px-12 py-4">
-            <Link
+            <ScrollLink
+              offset={mobileNavbarOffset}
               href="#projects"
               onClick={() => setIsOpen(false)}
               className="transition-hover text-2xl font-semibold tracking-widest text-gray-700 duration-300 hover:border-b-2  hover:border-b-trinidad-500 "
             >
               Projects
-            </Link>
+            </ScrollLink>
           </div>
           <div className="px-12 py-4">
-            <Link
+            <ScrollLink
+              offset={mobileNavbarOffset}
               href="#contact"
               onClick={() => setIsOpen(false)}
               className="transition-hover text-2xl font-semibold tracking-widest text-gray-700 duration-300 hover:border-b-2  hover:border-b-trinidad-500 "
             >
               Contact
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>
