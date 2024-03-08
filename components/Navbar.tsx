@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Logo from "@/components/Logo";
 import ScrollLink from "./ScrollLink";
