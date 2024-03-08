@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </span>
           ))}
         </div>
-        <h2 className="mt-2 text-trinidad-500 text-justify text-2xl font-semibold leading-8 tracking-tight">
+        <h2 className="mt-2 text-trinidad-500 text-2xl font-semibold leading-8 tracking-tight">
           {project.title}
         </h2>
         <div className="prose mt-4 max-w-none  text-gray-500 ">

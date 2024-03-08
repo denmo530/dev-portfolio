@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     buttonText: "Details",
     date: "2024-Present",
     icon: "work",
-    tech: ["React", "Next.js", "TailwindCSS", "Prisma", "NextAuth", "MongoDB"],
+    tech: ["React", "C++", "Design Patterns", "Figma", "Research"],
   },
   {
     id: 2,
