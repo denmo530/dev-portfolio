@@ -13,7 +13,7 @@ const AboutItems = [
   },
   {
     title: "My Hobbies 🎨",
-    desc: "When I'm not studying I'm either working on a side project, learning new technologies or being active in student groups trying to bring the student community together. Of course I have other hobbies to. Like Skateboarding, getting a sweaty workout at the gym and recently honing my skills in Jiu Jitsu and MMA.",
+    desc: "When I'm not studying I'm either working on a side project, learning new technologies or being active in student groups trying to bring the student community together. Of course I have other hobbies too. Like Skateboarding, getting a sweaty workout at the gym and recently honing my skills in Jiu Jitsu and MMA.",
   },
 ];
 
