@@ -25,7 +25,7 @@ const AboutSection = () => {
           About
         </h1>
         <p className="text-lg leading-7 text-gray-600 ">
-          Let's explore what I'm up to, who I am and my interests. 🚀
+          Let&apos;s explore what I&apos;m up to, who I am and my interests. 🚀
         </p>
       </div>
       <ul className="grid grid-cols-1 gap-6 rounded-3xl px-4 pt-6 sm:grid-cols-2 lg:grid-cols-3">

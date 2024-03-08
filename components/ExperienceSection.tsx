@@ -12,8 +12,8 @@ const ExperienceSection = () => {
           Experience
         </h1>
         <p className="text-lg leading-7 text-gray-600 max-w-xl">
-          I'm an open-minded person, always seeking new knowlegde. Here are some
-          of my current skills and work experiences. 🧠
+          I&apos;m an open-minded person, always seeking new knowlegde. Here are
+          some of my current skills and work experiences. 🧠
         </p>
       </div>
       <div className="px-4 pt-6 rounded-3xl text-base flex flex-col justify-center items-start sm:text-lg ">

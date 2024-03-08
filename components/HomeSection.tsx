@@ -43,7 +43,7 @@ const HomeSection = () => {
           <span className="font-semibold text-trinidad-600">
             Computer Vision
           </span>
-          . Let's innovate and shape the future!
+          . Let&apos;s innovate and shape the future!
         </p>
         <div className="mt-6 flex gap-x-4 text-5xl justify-center text-gray-700">
           <a target="_blank" href="https://github.com/denmo530">
