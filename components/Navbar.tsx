@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Logo from "@/components/Logo";
 import ScrollLink from "./ScrollLink";
@@ -8,6 +8,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navbarOffset = 100;
   const mobileNavbarOffset = 120;
+
+  const toggleBodyScroll = (disableScroll: boolean) => {
+    if (disableScroll) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  };
+
+  useEffect(() => {
+    toggleBodyScroll(isOpen);
+    return () => toggleBodyScroll(false);
+  }, [isOpen]);
 
   return (
     <header className="sticky z-40 top-0 flex items-center justify-between  bg-transparent py-5 backdrop-blur-md">
@@ -58,8 +71,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed sm:hidden left-0 top-0 h-screen w-full transform bg-white opacity-95 duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-[110%]"
+        className={`fixed left-0 top-0 h-screen w-full transform bg-white opacity-95 duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end">

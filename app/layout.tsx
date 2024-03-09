@@ -23,9 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <section className="mx-auto max-w-3xl px-4 font-sans sm:px-6 xl:max-w-7xl xl:px-0 antialiased overflow-x-hidden">
+        <section className="mx-auto max-w-screen px-4 font-sans sm:px-6 xl:max-w-7xl xl:px-0 antialiased overflow-x-clip">
           <Navbar />
-
           <main className="mb-auto px-1">{children}</main>
           <Analytics />
           <Footer />
